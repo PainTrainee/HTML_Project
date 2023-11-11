@@ -221,9 +221,6 @@ const addProductToCart = (productId) =>{
       productId : product.id,
       quantity : document.getElementById("cart-input").value
     };
-    console.log(product.id);
-    console.log(cart.productId);
-    console.log(carts.find(p => p.productId === product.id));
     if (cart.quantity > product.stock || cart.quantity < 1 || carts.find(p => p.productId === product.id)) {
         if (product.stock === 0) {
             Swal.fire({
